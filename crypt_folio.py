@@ -38,11 +38,6 @@ if uploaded_file is not None:
             USD_total = USD_total + df.at[i, 'Value']
         
     st.write(df)
-    
-#    st.write('GBP Holding value: ' + str(("%.2f" % GBP_total)))
-#    st.write('USD Holding value: ' + str(("%.2f" % USD_total)))
-
-
 
     st.write('GBP Holding value: ' + str('{:,.2f}'.format(GBP_total)))
     st.write('USD Holding value: ' + str('{:,.2f}'.format(USD_total)))
