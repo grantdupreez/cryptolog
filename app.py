@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests 
 import time
 import streamlit as st
-import decimal
+from money import Money
 
 st.title("Crypto Value Report")
 
@@ -22,7 +22,7 @@ def get_crypto_price(coin):
 if st.button('Calculate'):
     crypto = select_currency 
     price = get_crypto_price(crypto)
-    holding_price = decimal(price.split(' ')[0]) * select_holding
+    holding_price = Money(price.split(' ')[0]) * select_holding
     st.write(crypto+' price: ',price)
     st.write(value+' price: ',holding_price)
     
