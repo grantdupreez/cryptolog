@@ -18,6 +18,8 @@ def get_current_price(symbol):
     todays_data = ticker.history(period='1d')
     return todays_data['Close'][0]
 
+crypt_total = 0
+
 uploaded_file = st.sidebar.file_uploader("Upload your portfolio file",type=['CSV'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, header=[0])
@@ -35,6 +37,8 @@ if uploaded_file is not None:
     for i in df.index:
         df.at[i, "Price"] = get_current_price(df.at[i, 'Symbol'])
         df.at[i, "Value"] = df.at[i, 'Price'] * df.at[i, 'Holding']
+        crypt_total = crypt_total + df.at[i, 'Holding']
         
     st.write(df)
     
+    st.write('Holding value: ' + crypt_total
