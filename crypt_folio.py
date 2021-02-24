@@ -13,6 +13,11 @@ from pandas_datareader import data as pdr
 
 st.title("Cryptocurrency Valuation Repoting Tool")
 
+def get_current_price(symbol):
+    ticker = yf.Ticker(symbol)
+    todays_data = ticker.history(period='1d')
+    return todays_data['Close'][0]
+
 uploaded_file = st.sidebar.file_uploader("Upload your portfolio file",type=['CSV'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, header=[0])
@@ -22,3 +27,7 @@ if uploaded_file is not None:
 
     st.write(df)
     
+    for row in df.rows:
+        df['price'] = get_current_price(df.Symbol)
+
+st.write(df)
