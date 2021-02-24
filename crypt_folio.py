@@ -49,3 +49,5 @@ if uploaded_file is not None:
     fig = px.pie(df, values='Value', names='Symbol')
     fig
     
+    fig = px.density_heatmap(df, x="Value", y="Symbol")
+    fig
