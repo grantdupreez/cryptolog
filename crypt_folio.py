@@ -25,12 +25,17 @@ if uploaded_file is not None:
 
     warnings.filterwarnings('ignore')
     
-    for index, row in df.iterrows():
-        df.index['Price'] = get_current_price(row['Symbol'])
+#    for index, row in df.iterrows():
+#        df.index['Price'] = get_current_price(row['Symbol'])
         
 #        st.write(price)
 #        df['Price'] = price
 #        df['Value'] = df.Holding * float(price)
-        
+ 
+    for i in df.index:
+        df.at[i, "Price"] = get_current_price(df.at[i, 'Symbol'])
+    
+    
+    
     st.write(df)
     
