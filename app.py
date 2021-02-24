@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests 
 import time
 import streamlit as st
+from re import sub
+from decimal import Decimal
 
 st.title("Crypto Value Report")
 
