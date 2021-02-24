@@ -3,7 +3,7 @@ import requests
 import time
 import streamlit as st
 from re import sub
-from decimal import Decimal
+from decimal import decimal
 
 st.title("Crypto Value Report")
 
