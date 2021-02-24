@@ -5,7 +5,7 @@ import streamlit as st
 
 st.title("Crypto Value Report")
 
-select_currency = st.selectbox('Currency?', ('bitcoin','BTC-GBP','BTC-USD', 'ETH-GBP','ETH-USD', 'ADA-GBP','ADA-USD'))
+select_currency = st.selectbox('Currency?', ('bitcoin','ethereum','cardano', 'ravencoin','the graph', 'nervos','1inch'))
 
 def get_crypto_price(coin):
     url = "https://www.google.com/search?q="+coin+"+price"    
