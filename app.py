@@ -24,7 +24,7 @@ if st.button('Calculate'):
     price = get_crypto_price(crypto)
     holding_price = price.split(' ')[0]
     holding_price = holding_price.replace((",", "")
-    holding_price = float(holding_price) * select_holding
+    holding_val = float(holding_price) * select_holding
     st.write(crypto+' price: ',price)
-    st.write(value+' price: ',holding_price)
+    st.write(value+' price: ',holding_val)
     
