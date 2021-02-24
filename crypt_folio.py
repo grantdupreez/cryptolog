@@ -28,7 +28,8 @@ if uploaded_file is not None:
     st.write(df)
     
     for row in df.iterrows():
-        st.write('help'
+        st.write('help')
+        
 #        price = get_current_price(df.Symbol)
 #        st.write(price)
     st.write(get_current_price('BTC-GBP'))
