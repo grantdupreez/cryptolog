@@ -30,7 +30,7 @@ if uploaded_file is not None:
     for i in df.index:
         df.at[i, "Price"] = get_current_price(df.at[i, 'Symbol'])
         df.at[i, "Value"] = df.at[i, 'Price'] * df.at[i, 'Holding']
-        crypt_total = crypt_total += df.at[i, 'Holding']
+        crypt_total = crypt_total + df.at[i, 'Value']
         
     st.write(df)
     
