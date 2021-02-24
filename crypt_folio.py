@@ -45,9 +45,9 @@ if uploaded_file is not None:
     now = datetime.now()
     date_time = now.strftime("%d/%m/%Y, %H:%M:%S")
     st.write("Date and time:",date_time)
-
-    fig = px.pie(df, values='Value', names='Symbol')
-    fig
     
     fig = px.bar(df, x='Symbol', y='Value')
+    fig
+
+    fig = px.pie(df, values='Value', names='Symbol')
     fig
