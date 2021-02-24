@@ -24,11 +24,10 @@ if uploaded_file is not None:
     df.head()
 
     warnings.filterwarnings('ignore')
-
-#    st.write(df)
     
     for index, row in df.iterrows():
         price = get_current_price(row['Symbol'])
+        st.write(price)
         df['Price'] = price
         df['Value'] = df.Holding * float(price)
         
