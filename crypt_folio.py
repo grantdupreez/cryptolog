@@ -29,7 +29,7 @@ if uploaded_file is not None:
     
     for index, row in df.iterrows():
         price = get_current_price(row['Symbol'])
-        st.write(price)
-#    st.write(get_current_price('BTC-GBP'))
+        df['Value'] = df.Holding * float(price)
         
-#    st.write(df)
+    st.write(df)
+    
