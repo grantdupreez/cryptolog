@@ -26,7 +26,6 @@ if uploaded_file is not None:
     df.head()
 
     warnings.filterwarnings('ignore')
-    cur = df.Symbol
     
     for i in df.index:
         df.at[i, "Price"] = get_current_price(df.at[i, 'Symbol'])
@@ -35,7 +34,10 @@ if uploaded_file is not None:
         
     st.write(df)
     
+    cur = df.Symbol
+
     st.write('Holding value: ' + str(("%.2f" % crypt_total)) + cur[-3:])
+
     now = datetime.now()
     date_time = now.strftime("%d/%m/%Y, %H:%M:%S")
     st.write("Date and time:",date_time)
