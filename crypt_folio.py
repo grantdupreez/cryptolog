@@ -15,8 +15,10 @@ st.title("Cryptocurrency Valuation Repoting Tool")
 
 uploaded_file = st.sidebar.file_uploader("Upload your portfolio file",type=['CSV'])
 if uploaded_file is not None:
-    btc_df = pd.read_csv(uploaded_file, header=[0])
-    btc_df.head()
+    df = pd.read_csv(uploaded_file, header=[0])
+    df.head()
 
     warnings.filterwarnings('ignore')
 
+    st.write(df)
+    
