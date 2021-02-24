@@ -34,7 +34,7 @@ if uploaded_file is not None:
         
     st.write(df)
     
-    st.write('Holding value: ' + str(("%.2f" % crypt_total)))
+    st.write('Holding value: ' + str(("%.2f" % crypt_total)) + ticker[-3:])
     now = datetime.now()
     date_time = now.strftime("%d/%m/%Y, %H:%M:%S")
     st.write("Date and time:",date_time)
