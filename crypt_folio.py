@@ -30,6 +30,6 @@ if uploaded_file is not None:
 #    for row in df.iterrows():
 #        price = get_current_price(df.Symbol)
 #        st.write(price)
-    get_current_price('BTC-GBP')
+    st.write(get_current_price('BTC-GBP'))
         
-    st.write(df)
+#    st.write(df)
