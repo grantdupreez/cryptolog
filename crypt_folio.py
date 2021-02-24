@@ -25,9 +25,9 @@ if uploaded_file is not None:
 
     warnings.filterwarnings('ignore')
 
-#    st.write(df)
+    st.write(df)
     
     for index, row in df.iterrows():
         df['price'] = get_current_price(df.Symbol)
 
-st.write(df)
+    st.write(df)
