@@ -35,3 +35,4 @@ if uploaded_file is not None:
     st.write(df)
     
     st.write('Holding value: ' + str(("%.2f" % crypt_total)))
+    st,write(datetostr(now())
