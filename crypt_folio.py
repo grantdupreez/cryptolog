@@ -39,8 +39,8 @@ if uploaded_file is not None:
         
     st.write(df)
 
-    st.write('GBP Holding value: ' + str('{:,.2f}'.format(GBP_total)))
-    st.write('USD Holding value: ' + str('{:,.2f}'.format(USD_total)))
+    st.write('GBP holding value: ' + str('{:,.2f}'.format(GBP_total)))
+    st.write('USD holding value: ' + str('{:,.2f}'.format(USD_total)))
 
     now = datetime.now()
     date_time = now.strftime("%d/%m/%Y, %H:%M:%S")
