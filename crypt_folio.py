@@ -46,6 +46,6 @@ if uploaded_file is not None:
     date_time = now.strftime("%d/%m/%Y, %H:%M:%S")
     st.write("Date and time:",date_time)
 
-    fig = px.pie(df, values='Value', names='Currencies', title='Currency Spread')
+    fig = px.histogram(df, x="Value")
     fig
     
