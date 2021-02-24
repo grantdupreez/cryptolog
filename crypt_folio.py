@@ -27,7 +27,7 @@ if uploaded_file is not None:
 
     st.write(df)
     
-    for row in df.rows:
+    for index, row in df.iterrows():
         df['price'] = get_current_price(df.Symbol)
 
 st.write(df)
