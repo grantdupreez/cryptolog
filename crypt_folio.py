@@ -34,7 +34,7 @@ if uploaded_file is not None:
         cur = df.at[i, 'Symbol']
         if cur[-3:] == "GBP":
             GBP_total = GBP_total + df.at[i, 'Value']
-        else
+        else:
             USD_total = USD_total + df.at[i, 'Value']
         
     st.write(df)
