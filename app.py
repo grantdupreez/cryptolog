@@ -1,15 +1,7 @@
-import pandas as pd
-import streamlit as st
-import numpy as np
-import plotly.graph_objects as go
-import plotly.express as px
-from plotly.subplots import make_subplots
-import warnings
-from datetime import datetime
-from datetime import timedelta
-import yfinance as yf
-import lxml as xml
-from money import Money
+#Import the libraries 
+from bs4 import BeautifulSoup 
+import requests 
+import time
 
 st.title("Crypto Value Report")
 
