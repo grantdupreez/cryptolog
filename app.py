@@ -22,7 +22,9 @@ def get_crypto_price(coin):
 if st.button('Calculate'):
     crypto = select_currency 
     price = get_crypto_price(crypto)
-    holding_price = Money(price.split(' ')[0]) * select_holding
+    holding_price = price.split(' ')[0]
+    holding_price = holding_price.replace((",", "")
+    holding_price = float(holding_price) * select_holding
     st.write(crypto+' price: ',price)
     st.write(value+' price: ',holding_price)
     
