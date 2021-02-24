@@ -49,5 +49,5 @@ if uploaded_file is not None:
     fig = px.pie(df, values='Value', names='Symbol')
     fig
     
-    fig = px.bar(df, x='Value', y='Symbol')
+    fig = px.bar(df, x='Symbol', y='Value')
     fig
