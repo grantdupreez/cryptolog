@@ -11,7 +11,7 @@ import lxml as xml
 from money import Money
 from pandas_datareader import data as pdr
 
-st.title("Cryptocurrency Valuation Repoting Tool")
+st.title("Cryptocurrency Valuation")
 
 def get_current_price(symbol):
     ticker = yf.Ticker(symbol)
