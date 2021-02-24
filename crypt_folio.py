@@ -34,9 +34,7 @@ if uploaded_file is not None:
         
     st.write(df)
     
-    cur = df.Symbol
-
-    st.write('Holding value: ' + str(("%.2f" % crypt_total)) + cur[-3:])
+    st.write('Holding value: ' + str(("%.2f" % crypt_total)))
 
     now = datetime.now()
     date_time = now.strftime("%d/%m/%Y, %H:%M:%S")
